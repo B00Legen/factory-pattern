@@ -5,11 +5,10 @@ import Logistics.SeaLogistics;
 public class Main {
 	
 	public static void main (String[] args) {
-		Logistics road = new RoadLogistics();
-		road.planDelivery("Books", "Almaty");
+		GUIFactory factory;
+		Logistics logistics;
 		
-		Logistics sea = new SeaLogistics();
-		sea.planDelivery("Cars", "Aktau");
+		DeliveryApplication app = new DeliveryApplication(factory, logistics);
 	}
 }
 
