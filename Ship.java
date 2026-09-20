@@ -1,5 +1,5 @@
 class Ship implements Transport {
-	public void deliver() {
-		System.out.println("Delivering by sea");
+	public void deliver(String cargo, String destination) {
+		System.out.println("Delivering " + cargo + " to " + destination + " by sea");
 	}
 }

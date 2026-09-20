@@ -1,5 +1,5 @@
 class Truck implements Transport {
-	public void deliver() {
-		System.out.println("Delivering by land");
+	public void deliver(String cargo, String destination) {
+		System.out.println("Delivering " + cargo + " to " + destination + " by land");
 	}
 }
