@@ -23,9 +23,17 @@ public class Main {
 		
 		if (delivery.equalsIgnoreCase("ROAD")) logistics = new RoadLogistics();
 		else if (delivery.equalsIgnoreCase("SEA")) logistics = new SeaLogistics();
+		else {
+			System.out.println("Error: Unsupported delivery mode.");
+			return;
+		}
 		
 		if (platform.equalsIgnoreCase("WINDOWS")) factory = new WindowsFactory();
 		else if (platform.equalsIgnoreCase("MACOS")) factory = new MacOSFactory();
+		else {
+            System.out.println("Error: Unsupported UI platform.");
+            return;
+        }
 		
 		DeliveryApplication app = new DeliveryApplication(factory, logistics);
 		app.run();
