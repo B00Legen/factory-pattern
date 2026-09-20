@@ -18,15 +18,15 @@ public class Main {
 		System.out.println("Delivery mode: ");
 		String delivery = scanner.nextLine();
 		
-		System.out.println("UI platform: ");
-		String platform = scanner.nextLine();
-		
 		if (delivery.equalsIgnoreCase("ROAD")) logistics = new RoadLogistics();
 		else if (delivery.equalsIgnoreCase("SEA")) logistics = new SeaLogistics();
 		else {
 			System.out.println("Error: Unsupported delivery mode.");
 			return;
 		}
+		
+		System.out.println("UI platform: ");
+		String platform = scanner.nextLine();
 		
 		if (platform.equalsIgnoreCase("WINDOWS")) factory = new WindowsFactory();
 		else if (platform.equalsIgnoreCase("MACOS")) factory = new MacOSFactory();
